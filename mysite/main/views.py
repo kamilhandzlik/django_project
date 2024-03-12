@@ -7,7 +7,7 @@ from django.shortcuts import get_object_or_404
 
 def index(response, name):
     ls = ToDoList.objects.get(id=id)     # Zapytanie z metodą get
-    return render(response, "main/base.html", {})
+    return render(response, "main/list.html", {"ls":ls})
 
 def home(response):
     return render(response, "main/home.html", {})
