@@ -6,8 +6,8 @@ from django.shortcuts import get_object_or_404
 # Create your views here.
 
 def index(response, name):
-    ls = ToDoList.objects.get(name=name)     # Zapytanie z metodą get
-    items = ls.item_set.get(id=1)
-    return HttpResponse("<h1>%s</h1><br></br><p>%s</p>" %(ls.name, str(items.text))) # Tak zwane dynamic pages to znaczy jaką liczbę wpiszesz w url taką wyświetli strona
+    ls = ToDoList.objects.get(id=id)     # Zapytanie z metodą get
+    return render(response, "main/base.html", {})
 
-
+def home(response):
+    return render(response, "main/home.html", {})
