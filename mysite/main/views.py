@@ -6,7 +6,10 @@ from django.shortcuts import get_object_or_404
 # Create your views here.
 
 def index(response, name):
-    ls = ToDoList.objects.get(id=id)     # Zapytanie z metodą get
+    try:
+        ls = ToDoList.objects.get(name=name)     # Zapytanie z metodą get
+    except ToDoList.DoesNotExist:
+        ls = None
     return render(response, "main/list.html", {"ls":ls})
 
 def home(response):
