@@ -11,6 +11,11 @@ def index(response, name):
         ls = ToDoList.objects.get(name=name)     # Zapytanie z metodą get
     except ToDoList.DoesNotExist:
         ls = None
+
+    {"save":[""], "c1":["clicked"]}
+    if response.method == "POST":
+        if response.Post.get("save"):
+
     return render(response, "main/list.html", {"ls":ls})
 
 def home(response):
