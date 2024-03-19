@@ -15,6 +15,7 @@ def index(response, name):
     {"save":[""], "c1":["clicked"]}
     if response.method == "POST":
         if response.Post.get("save"):
+            pass
 
     return render(response, "main/list.html", {"ls":ls})
 
@@ -31,7 +32,7 @@ def create(response):
             t = ToDoList(name=n)
             t.save()        #Zapisywanie nowej ToDoList jeśli jej nazwa jest poprawna
 
-        return HttpResponseRedirect("/%i" %t.id) # Przekierowanie do listy
+        return HttpResponseRedirect("/%i" "%t".id) # Przekierowanie do listy
 
     else:
         form = CreateNewList()
