@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
+    'register.apps.RegisterConfig'
 ] # trzeba dodać naszą apkę do installed apps formuła nazwa aplikacji.apps.Naswa-apkiConfig     potem wykonujesz migracje
 
 MIDDLEWARE = [
