@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', register_views.register, name='register'),
     path('', include("main.urls")), # Sczytuje '' a następnie jeśli url jest pusty przenosi nas do urls w pliku main tam w zależności od ścieżki wpisanej w url przeniesie nas na różną stronę
+    path('', include("django.contrib.auth.urls")),
 ]
 
