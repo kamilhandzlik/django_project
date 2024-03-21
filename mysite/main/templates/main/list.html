@@ -4,7 +4,6 @@
 {% block content %}
     <h1>{{ls.name}}</h1>
     <form method="post" action="#">
-        {% csrf token %}
         <ul>
         {% for item in ls.item_set.all %}
             {% if item.complete == False %}
