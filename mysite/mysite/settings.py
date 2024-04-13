@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_forms',
-    'bootsrap4',
+    # 'crispy_forms',
+    # 'bootsrap4',
     'main.apps.MainConfig',
     'register.apps.RegisterConfig'
 ] # trzeba dodać naszą apkę do installed apps formuła nazwa aplikacji.apps.Naswa-apkiConfig     potem wykonujesz migracje
@@ -126,4 +126,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# CRISPY_TEMPLATE_PACK = 'bootstrap4'

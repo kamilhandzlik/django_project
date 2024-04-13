@@ -16,11 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include #na ogół trzeba dodać include
-from ..register.views import RegisterView
+from register import views as v
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register/', RegisterView.as_view(), name='register'),
+    path('register/', v.RegisterView.as_view(), name='register'),
     path('', include("main.urls")), # Sczytuje '' a następnie jeśli url jest pusty przenosi nas do urls w pliku main tam w zależności od ścieżki wpisanej w url przeniesie nas na różną stronę
     path('', include("django.contrib.auth.urls")),
 ]
