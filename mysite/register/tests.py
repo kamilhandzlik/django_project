@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from .forms import RegisterForm
 
 # Create your tests here.
+# some change
 
 
 class AuthenticationViewsTests(TestCase):
